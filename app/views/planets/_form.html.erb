@@ -1,0 +1,23 @@
+<% if @planet.errors.any? %>
+	<ul>
+		<%= @planet.errors.full_messages.each do |error| %>
+			<li> <%= error %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @planet do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :moons %>
+	<%= f.text_field :moons %>
+	<br>
+	<%= f.label :rings %>
+	<%= f.text_field :rings %>
+	<br>
+	<%= f.label :suns %>
+	<%= f.text_field :suns %>
+	<br>
+	<%= f.submit %>
+<% end %>

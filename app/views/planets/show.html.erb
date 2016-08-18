@@ -1,2 +1,24 @@
-<h1>Planets#show</h1>
-<p>Find me in app/views/planets/show.html.erb</p>
+<h1> <%= @planet.name %> </h1>
+<hr>
+<table>
+	<thead>
+		<tr>
+			<th>Moons</th>
+			<th>Rings</th>
+			<th>Suns</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> <%= @planet.moons %> </td>
+			<td> <%= @planet.rings %> </td>
+			<td> <%= @planet.suns %> </td>
+		</tr>
+	</tbody>
+</table>
+<hr>
+<%= link_to 'Edit Planet', edit_planet_path(@planet) %> ||
+<%= link_to 'Delete', planet_path(@planet), method: :delete %>
+<hr>	
+
+<%= link_to 'Back', planets_path %>

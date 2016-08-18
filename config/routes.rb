@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  get 'planets/index'
+  
 
-  get 'planets/show'
-
-  get 'planets/new'
-
-  get 'planets/edit'
+  root to: 'welcome_page#home'
+  resources :planets
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
